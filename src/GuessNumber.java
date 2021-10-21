@@ -11,15 +11,20 @@ public class GuessNumber {
 
         //Создаем переменную типа int
         int randInt;
-
-        //Сохраняем случайное число в переменной randInt;
-        randInt = rand.nextInt(10) + 1; // диапазон от 1 до 10
+        int highNumber;
+        int lowNumber;
 
         Scanner sc = new Scanner(System.in); // создание сканнера для считывания из консоли
         System.out.println("Введите число попыток");
         attempts = sc.nextInt();
-        //System.out.println("Введите нижний предел загадываемого числа");
-        //System.out.println("Введите верхний предел загадываемого числа");
+        System.out.println("Введите нижний предел загадываемого числа");
+        lowNumber = sc.nextInt();
+        System.out.println("Введите верхний предел загадываемого числа");
+        highNumber = sc.nextInt();
+
+        //Сохраняем случайное число в переменной randInt;
+        randInt = rand.nextInt(highNumber) + lowNumber; // диапазон от 1 до 10
+
         int i = 0;
             do {
                 System.out.println("Введите отгадываемое число");
