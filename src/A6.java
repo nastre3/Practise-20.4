@@ -2,6 +2,14 @@ public class A6 {
     public static void main(String[] args) {
         numbers(1, 2, -1);
         print("A7", 6);
+        evenNumbers();
+    }
+
+    //A8
+    private static void evenNumbers() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) System.out.println(i);
+        }
     }
 
     //A7
@@ -10,6 +18,8 @@ public class A6 {
                 System.out.println(string);
             }
     }
+
+
 
     private static void numbers(int a, int b, int c) {
         int positive = 0, negative = 0, zero = 0;
