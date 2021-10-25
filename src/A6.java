@@ -3,6 +3,14 @@ public class A6 {
         numbers(1, 2, -1);
         print("A7", 6);
         evenNumbers();
+        findMedian(1, 2, 3);
+    }
+
+    //A9
+    private static void findMedian(int a, int b, int c) {
+        if ((a >= b && a <= c) || (a >= c) && a <= b) System.out.println(a); // if a is median
+        else if ((b >= a && b <= c) || (b >= c && b <= a)) System.out.println(b); // if b is median
+        else System.out.println(c); // else c - median
     }
 
     //A8
@@ -14,11 +22,10 @@ public class A6 {
 
     //A7
     private static void print(String string, int n) {
-            for (int i = 0; i < n; i++) {
-                System.out.println(string);
-            }
+        for (int i = 0; i < n; i++) {
+            System.out.println(string);
+        }
     }
-
 
 
     private static void numbers(int a, int b, int c) {
