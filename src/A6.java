@@ -1,6 +1,14 @@
 public class A6 {
     public static void main(String[] args) {
         numbers(1, 2, -1);
+        print("A7", 6);
+    }
+
+    //A7
+    private static void print(String string, int n) {
+            for (int i = 0; i < n; i++) {
+                System.out.println(string);
+            }
     }
 
     private static void numbers(int a, int b, int c) {
