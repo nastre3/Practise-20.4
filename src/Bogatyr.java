@@ -5,35 +5,66 @@ public class Bogatyr {
     }
 
     private String name = "Добрыня";
-    private String classBogatyr = "Богатырь";
+    private final String classBogatyr = "Богатырь";
     private String weapon = "Меч - Кладенец (Урон: 100)";
-    private Boolean idtiBitGorynycha = true;
-    private final int golovaB = 1;
+    private int damage = 100;
+    //private Boolean idtiBitGorynycha = true;
 
     public void idtiBitGorynycha() {
-        System.out.println("Выходим из Киева...");
-        System.out.println("Идем на Кудыкину гору...");
-        System.out.println("Садимся на коня...");
+        moveFromKiev();
+        movetoMountain();
+        useHorse();
+        findMonster();
+        compareGolovy();
+        bitva();
+    }
+
+    private void findMonster() {
         System.out.println("Где эта змеюка...?");
     }
 
-    public void golovy() {
+    private void useHorse() {
+        System.out.println("Садимся на коня...");
+    }
+
+    private void movetoMountain() {
+        System.out.println("Идем на Кудыкину гору...");
+    }
+
+    private void moveFromKiev() {
+        System.out.println("Выходим из Киева...");
+    }
+
+    public void compareGolovy() {
+        int golovaB = 1;
         if (golovaB < 3) {
             System.out.println("Одна голова хорошо, а три - уже Горыныч.");
         }
     }
 
-    public void Bitva() {
+    public void bitva() {
         int udar = 0;
-        byte dpt = 0; // Damage Per Turn
-        while (udar < 3) {
-            udar += 1;
-            dpt += dpt;
-            System.out.println("Минус одна голова...");
-            System.out.println("Суммарный урон: " + dpt);
-        }
-        if (udar == 3) {
-            System.out.println("Горыныч побежден.");
+        int dpt = 0; // Damage Per Turn
+
+        switch (udar) {     // Описания ударов могут различаться
+            case 0:
+                udar++;
+                dpt += damage;
+                System.out.println("Первая голова отрублена");
+                System.out.println("Суммарный урон: " + dpt);
+            case 1:
+                udar++;
+                dpt += damage;
+                System.out.println("Вторая голова отрублена");
+                System.out.println("Суммарный урон: " + dpt);
+            case 2:
+                udar++;
+                dpt += damage;
+                System.out.println("Третья голова отрублена");
+                System.out.println("Суммарный урон: " + dpt);
+            case 3:
+                System.out.println("Горыныч побежден.");
+                break;
         }
     }
 }
