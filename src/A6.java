@@ -13,6 +13,45 @@ public class A6 {
         signal(9.8);
         numberToWorld(123);
         syracuseSequence(10);
+        table(9);
+        drawRectangle(10, 5, "N");
+    }
+
+    //A20
+    private static void drawRectangle(int n, int m, String s) {
+        for (int i = 0; i < n; i++) { // n — высота прямоугольника
+            String string = "";
+            if (i == 0 || i == n - 1) { // если первая или последняя строчки
+                for (int j = 0; j < m; j++) {
+                    string += s; // строим строку из m символов
+                }
+            } else {
+                // иначе строим строку вида {символ s + m - 2 пробела + символ s}
+                string += s;
+                for (int j = 1; j < m - 1; j++) { // m — ширина прямоугольника
+                    string += " ";
+                }
+                if (m != 1) string += s; // проверяем, что прямоугольник не 1 в ширину
+            }
+            System.out.println(string);
+        }
+    }
+
+    //A19
+    private static void table(int n) {
+        // выводим таблицу умножения в стандартном виде
+        for (int i = 1; i < n + 1; i++) {
+            for (int j = 1; j < n + 1; j++) {
+                System.out.print(i * j + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        // выводим таблицу умножения для числа n
+        for (int i = 1; i < n + 1; i++) {
+            System.out.println(i + " * " + n + " = " + i * n);
+        }
     }
 
     //A18
