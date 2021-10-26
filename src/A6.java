@@ -8,6 +8,44 @@ public class A6 {
         printForm(6, 4);
         isPow(245);
         cube(6);
+        findFactorial(3);
+        years(2021);
+        signal(9.8);
+    }
+
+    //A16
+    private static void signal(double time) {
+        time %= 5;
+            if (time>=0 &&time<3) {
+                System.out.println("green");
+            } else if (time>=3 && time<4) {
+                System.out.println("yellow");
+            } else {
+                System.out.println("red");
+            }
+        //0-3 green
+        //3-4 yellow
+        //4-5 red
+    }
+
+    //A15
+    private static void years(int year) {
+        boolean isLeap;
+        if (year % 400 == 0) isLeap = true;
+        else if (year % 100 == 0) isLeap = false;
+        else if (year % 4 == 0) isLeap = true;
+        else isLeap = false;
+
+        System.out.println(isLeap ? "This year is a leap year" : "This year is not a leap year");
+    }
+
+    //A14
+    private static void findFactorial(int n) {
+        int result = 1;
+        for (int i=1;i<=n;i++) {
+            result *= i;
+        }
+        System.out.println(result);
     }
 
     //A13
