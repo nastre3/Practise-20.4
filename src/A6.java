@@ -12,19 +12,38 @@ public class A6 {
         years(2021);
         signal(9.8);
         numberToWorld(123);
+        syracuseSequence(10);
+    }
+
+    //A18
+    private static void syracuseSequence(int number) {
+        String numbers = number + " -> ";
+        int countCycles = 0;
+        while (number != 1) {
+            if (number % 2 == 0) {
+                number /= 2;
+            } else {
+                number = (3 * number) + 1;
+            }
+            if (number != 1) numbers += number + " -> ";
+            else numbers += number + "";
+            countCycles++;
+        }
+        System.out.println(numbers);
+        System.out.println(countCycles);
     }
 
     //A17
     private static void numberToWorld(int i) {
         String result = "";
-        if (i%2==0) {
+        if (i % 2 == 0) {
             result += "even";
         } else {
             result += "odd";
         }
-        if (i >=0 && i<=10) {
+        if (i >= 0 && i <= 10) {
             result += " single digit ";
-        } else if (i>=10 && i<=100) result += " two-digit ";
+        } else if (i >= 10 && i <= 100) result += " two-digit ";
         else result += " three-digit ";
 
         System.out.println(result + "number");
@@ -33,13 +52,13 @@ public class A6 {
     //A16
     private static void signal(double time) {
         time %= 5;
-            if (time>=0 &&time<3) {
-                System.out.println("green");
-            } else if (time>=3 && time<4) {
-                System.out.println("yellow");
-            } else {
-                System.out.println("red");
-            }
+        if (time >= 0 && time < 3) {
+            System.out.println("green");
+        } else if (time >= 3 && time < 4) {
+            System.out.println("yellow");
+        } else {
+            System.out.println("red");
+        }
         //0-3 green
         //3-4 yellow
         //4-5 red
@@ -59,7 +78,7 @@ public class A6 {
     //A14
     private static void findFactorial(int n) {
         int result = 1;
-        for (int i=1;i<=n;i++) {
+        for (int i = 1; i <= n; i++) {
             result *= i;
         }
         System.out.println(result);
