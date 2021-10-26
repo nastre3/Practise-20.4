@@ -4,6 +4,13 @@ public class A6 {
         print("A7", 6);
         evenNumbers();
         findMedian(1, 2, 3);
+        checkTriangle(1, 2, 3);
+    }
+
+    //A10
+    private static void checkTriangle(int a, int b, int c) {
+        if ((a < b + c) && (b < c + a) && (c < a + b)) System.out.println("YES");
+        else System.out.println("NO");
     }
 
     //A9
