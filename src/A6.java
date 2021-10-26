@@ -11,6 +11,23 @@ public class A6 {
         findFactorial(3);
         years(2021);
         signal(9.8);
+        numberToWorld(123);
+    }
+
+    //A17
+    private static void numberToWorld(int i) {
+        String result = "";
+        if (i%2==0) {
+            result += "even";
+        } else {
+            result += "odd";
+        }
+        if (i >=0 && i<=10) {
+            result += " single digit ";
+        } else if (i>=10 && i<=100) result += " two-digit ";
+        else result += " three-digit ";
+
+        System.out.println(result + "number");
     }
 
     //A16
