@@ -5,6 +5,40 @@ public class A6 {
         evenNumbers();
         findMedian(1, 2, 3);
         checkTriangle(1, 2, 3);
+        printForm(6, 4);
+        isPow(245);
+        cube(6);
+    }
+
+    //A13
+    private static void cube(int n) {
+        if (n > 0) {
+            for (int i = 0; i <= n; i++) {
+                System.out.println("The cube of " + i + " is equal " + (i * i * i));
+            }
+        }
+    }
+
+    //A12
+    private static void isPow(int n) {
+        int count = 0, now = 1;
+        while (now < n) {
+            now *= 2;
+            count++;
+        }
+        if (now == n) System.out.println(count);
+        else System.out.println("NO");
+    }
+
+    // A11
+    private static void printForm(int m, int n) {
+        for (int i = 0; i < m; i++) {
+            String s = "";
+            for (int j = 0; j < n; j++) {
+                s += 8;
+            }
+            System.out.println(s);
+        }
     }
 
     //A10
