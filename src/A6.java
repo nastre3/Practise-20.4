@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class A6 {
     public static void main(String[] args) {
         numbers(1, 2, -1);
@@ -15,6 +17,12 @@ public class A6 {
         syracuseSequence(10);
         table(9);
         drawRectangle(10, 5, "N");
+
+        //Создаем массив
+        int[] array = {4, 5, 6, 22};
+        //Ищем элемент и печатаем его индекс в консоль
+        System.out.println(Arrays.binarySearch(array, 4));
+        //Будет напечатано 0
     }
 
     //A20
